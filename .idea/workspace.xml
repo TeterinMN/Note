@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cb45d2de-8abb-4aa3-ad2f-8f882827053e" name="Changes" comment="Учет изменений" />
+    <list default="true" id="cb45d2de-8abb-4aa3-ad2f-8f882827053e" name="Changes" comment="Добавил фильтрацию по дате и времени">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NoteApp.py" beforeDir="false" afterPath="$PROJECT_DIR$/NoteApp.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -96,6 +99,7 @@
       <updated>1707018353472</updated>
       <workItem from="1707018355917" duration="415000" />
       <workItem from="1707783248964" duration="3117000" />
+      <workItem from="1707786407438" duration="767000" />
     </task>
     <task id="LOCAL-00001" summary="Создал репозиторий, первый коммит.">
       <option name="closed" value="true" />
@@ -137,7 +141,15 @@
       <option name="project" value="LOCAL" />
       <updated>1707786331909</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Добавил фильтрацию по дате и времени">
+      <option name="closed" value="true" />
+      <created>1707786789503</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1707786789503</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -150,9 +162,10 @@
     <MESSAGE value="Оптимизировал код, добавил перезапись id при удалении заметки" />
     <MESSAGE value="Оптимизировал код" />
     <MESSAGE value="Учет изменений" />
-    <option name="LAST_COMMIT_MESSAGE" value="Учет изменений" />
+    <MESSAGE value="Добавил фильтрацию по дате и времени" />
+    <option name="LAST_COMMIT_MESSAGE" value="Добавил фильтрацию по дате и времени" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Note$NoteApp.coverage" NAME="NoteApp Coverage Results" MODIFIED="1707785663711" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Note$NoteApp.coverage" NAME="NoteApp Coverage Results" MODIFIED="1707786821119" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

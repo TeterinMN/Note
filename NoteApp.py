@@ -100,28 +100,54 @@ class NotesApp:
         except StopIteration:
             print(f'Заметка с ID {note_id} не найдена.')
 
+    def view_note_by_id(self, note_id):
+        """
+        Выводит заметку с указанным ID на экран, если она существует.
+        """
+        try:
+            note = next(note for note in self.notes if note.note_id == note_id)
+            print(
+                f'ID: {note.note_id}\nЗаголовок: {note.title}\nТело заметки: {note.body}\n'
+                f'Время создания: {note.timestamp}\n')
+        except StopIteration:
+            print(f'Заметка с ID {note_id} не найдена.')
+
 
 def main():
     try:
         notes_app = NotesApp()
         while True:
             print("\nВыберите действие:")
-            print("1. Просмотреть заметки")
-            print("2. Добавить заметку")
-            print("3. Редактировать заметку")
-            print("4. Удалить заметку")
-            print("5. Просмотреть заметки после определенной даты")
-            print("6. Выйти")
+            print("1. Просмотреть все заметки")
+            print("2. Просмотреть заметки после определенной даты")
+            print("3. Просмотреть заметку с указанным ID")
+            print("4. Добавить заметку")
+            print("5. Редактировать заметку")
+            print("6. Удалить заметку")
+            print("7. Выйти")
 
             choice = input("Введите номер действия: ")
 
             if choice == '1':
                 notes_app.view_notes()
             elif choice == '2':
+                try:
+                    date_str = input("Введите дату в формате YYYY-MM-DD HH:MM:SS: ")
+                    filter_date = datetime.strptime(date_str, "%Y-%m-%d %H:%M:%S")
+                    notes_app.view_notes(filter_date)
+                except ValueError:
+                    print("Ошибка: Некорректный формат даты.")
+            elif choice == '3':
+                try:
+                    note_id = int(input("Введите ID заметки для просмотра: "))
+                    notes_app.view_note_by_id(note_id)
+                except ValueError:
+                    print("Ошибка: ID заметки должен быть числовым значением.")
+            elif choice == '4':
                 title = input("Введите заголовок заметки: ")
                 body = input("Введите тело заметки: ")
                 notes_app.add_note(title, body)
-            elif choice == '3':
+            elif choice == '5':
                 try:
                     note_id = int(input("Введите ID заметки для редактирования: "))
                     title = input("Введите новый заголовок заметки: ")
@@ -129,20 +155,13 @@ def main():
                     notes_app.edit_note(note_id, title, body)
                 except ValueError:
                     print("Ошибка: ID заметки должен быть числовым значением.")
-            elif choice == '4':
+            elif choice == '6':
                 try:
                     note_id = int(input("Введите ID заметки для удаления: "))
                     notes_app.delete_note(note_id)
                 except ValueError:
                     print("Ошибка: ID заметки должен быть числовым значением.")
-            elif choice == '5':
-                try:
-                    date_str = input("Введите дату в формате YYYY-MM-DD HH:MM:SS: ")
-                    filter_date = datetime.strptime(date_str, "%Y-%m-%d %H:%M:%S")
-                    notes_app.view_notes(filter_date)
-                except ValueError:
-                    print("Ошибка: Некорректный формат даты.")
-            elif choice == '6':
+            elif choice == '7':
                 break
             else:
                 print("Некорректный ввод. Пожалуйста, выберите существующее действие.")
