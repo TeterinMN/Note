@@ -55,15 +55,17 @@ class NotesApp:
         print(
             f'Заметка добавлена:\nID: {note_id}\nЗаголовок: {title}\nТело заметки: {body}\nВремя создания: {timestamp}')
 
-    def view_notes(self):
+    def view_notes(self, filter_date=None):
         """
         Выводит все заметки.
+        Если указана filter_date, выводит только заметки, созданные после этой даты.
         """
         if self.notes:
             for note in self.notes:
-                print(
-                    f'ID: {note.note_id}\nЗаголовок: {note.title}\nТело заметки: {note.body}\n'
-                    f'Время создания: {note.timestamp}\n')
+                if filter_date is None or datetime.strptime(note.timestamp, "%Y-%m-%d %H:%M:%S") >= filter_date:
+                    print(
+                        f'ID: {note.note_id}\nЗаголовок: {note.title}\nТело заметки: {note.body}\n'
+                        f'Время создания: {note.timestamp}\n')
         else:
             print('Заметок нет.')
 
@@ -108,7 +110,8 @@ def main():
             print("2. Добавить заметку")
             print("3. Редактировать заметку")
             print("4. Удалить заметку")
-            print("5. Выйти")
+            print("5. Просмотреть заметки после определенной даты")
+            print("6. Выйти")
 
             choice = input("Введите номер действия: ")
 
@@ -133,6 +136,13 @@ def main():
                 except ValueError:
                     print("Ошибка: ID заметки должен быть числовым значением.")
             elif choice == '5':
+                try:
+                    date_str = input("Введите дату в формате YYYY-MM-DD HH:MM:SS: ")
+                    filter_date = datetime.strptime(date_str, "%Y-%m-%d %H:%M:%S")
+                    notes_app.view_notes(filter_date)
+                except ValueError:
+                    print("Ошибка: Некорректный формат даты.")
+            elif choice == '6':
                 break
             else:
                 print("Некорректный ввод. Пожалуйста, выберите существующее действие.")
