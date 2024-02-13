@@ -4,12 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cb45d2de-8abb-4aa3-ad2f-8f882827053e" name="Changes" comment="Создал репозиторий, первый коммит.">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="cb45d2de-8abb-4aa3-ad2f-8f882827053e" name="Changes" comment="Добавил комментарии к коду">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Note.py" beforeDir="false" afterPath="$PROJECT_DIR$/Note.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NoteApp.py" beforeDir="false" afterPath="$PROJECT_DIR$/NoteApp.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notes.json" beforeDir="false" afterPath="$PROJECT_DIR$/notes.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,7 +94,7 @@
       <option name="presentableId" value="Default" />
       <updated>1707018353472</updated>
       <workItem from="1707018355917" duration="415000" />
-      <workItem from="1707783248964" duration="527000" />
+      <workItem from="1707783248964" duration="1961000" />
     </task>
     <task id="LOCAL-00001" summary="Создал репозиторий, первый коммит.">
       <option name="closed" value="true" />
@@ -108,7 +104,15 @@
       <option name="project" value="LOCAL" />
       <updated>1707018757396</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Добавил комментарии к коду">
+      <option name="closed" value="true" />
+      <created>1707784809780</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1707784809780</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -117,9 +121,10 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Создал репозиторий, первый коммит." />
-    <option name="LAST_COMMIT_MESSAGE" value="Создал репозиторий, первый коммит." />
+    <MESSAGE value="Добавил комментарии к коду" />
+    <option name="LAST_COMMIT_MESSAGE" value="Добавил комментарии к коду" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Note$NoteApp.coverage" NAME="NoteApp Coverage Results" MODIFIED="1707783330938" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Note$NoteApp.coverage" NAME="NoteApp Coverage Results" MODIFIED="1707784713868" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
